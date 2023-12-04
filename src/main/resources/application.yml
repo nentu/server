@@ -1,0 +1,41 @@
+server:
+  port: 8082
+  servlet:
+    session:
+      cookie:
+        secure: true
+        same-site: none
+        http-only: true
+
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Qwerty789@
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          keycloak:
+#            client-id: "web_lab4"
+#            authorization-grant-type: authorization_code
+#            scope: openid
+#      provider:
+#        keycloak:
+#          issuer-uri: http://localhost:8080/realms/web_lab4
+#          user-name-attribute: preferred_username
+#      resource-server:
+#        jwt:
+#          issuer-uri: http://localhost:8080/realms/web_lab4
