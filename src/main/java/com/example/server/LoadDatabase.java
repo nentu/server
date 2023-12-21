@@ -10,14 +10,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 class LoadDatabase {
-
     private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
     @Bean
     CommandLineRunner initDatabase(UserRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(new User("admin", "admin", "admin name")));
-            log.info("Preloading " + repository.save(new User("user", "user", "user name")));
+//            log.info("Preloading " + repository.save(new User("admin", "admin", "admin name")));
+//            log.info("Preloading " + repository.save(new User("user", "user", "user name")));
         };
     }
 

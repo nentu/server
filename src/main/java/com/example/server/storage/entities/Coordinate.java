@@ -19,6 +19,7 @@ public class Coordinate {
     private float y;
     private float r;
     private boolean success;
-    @ManyToOne
-    private User author;
+    private String authorId;
+//    @ManyToOne
+//    private User author;
 }

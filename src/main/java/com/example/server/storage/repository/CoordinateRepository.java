@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CoordinateRepository extends JpaRepository<Coordinate, Long> {
-    List<Coordinate> findAllByAuthor(User user);
+    List<Coordinate> findAllByAuthorId(String id);
 
-    void deleteAllByAuthor(User user);
+    void deleteAllByAuthorId(String id);
 }

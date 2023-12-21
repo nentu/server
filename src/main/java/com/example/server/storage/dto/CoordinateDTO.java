@@ -5,9 +5,11 @@ import com.example.server.storage.entities.User;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class CoordinateDTO {
     private long id;
     private float x;
@@ -16,14 +18,14 @@ public class CoordinateDTO {
     private boolean success;
     private String ownerName;
 
-    public CoordinateDTO(Coordinate source){
+    public CoordinateDTO(Coordinate source, String authorName){
         this(
                 source.getId(),
                 source.getX(),
                 source.getY(),
                 source.getR(),
                 source.isSuccess(),
-                source.getAuthor().getName()
+                authorName
         );
     }
 }
